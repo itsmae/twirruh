@@ -15,6 +15,7 @@
   <%= @user.password %>
 </p>
 
+
 <h1>Posts</h1>
 <table>
   <thead>
@@ -30,6 +31,7 @@
   	<tr>
     	<td><%= micropost.content %></td>
     	<td><%= micropost.created_at.to_s.to_d %></td>
+      <td><%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   	</tr>
 	<% end %>
   </tbody>
